@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/bluessista/mws-restaurant-stage-1#readme",
   "devDependencies": {
+    "autoprefixer": "^9.0.1",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.4"
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1"
   }
 }
