@@ -2,7 +2,8 @@ let gulp = require('gulp');
 let cleanCss = require('gulp-clean-css');
 let concat = require('gulp-concat');
 let postCss = require('gulp-postcss');
-let autoprefixer = require('autoprefixer')
+let autoprefixer = require('autoprefixer');
+let imagemin = require('gulp-imagemin');
 
 gulp.task('minifyCss', () => {
     return gulp.src('css/*.css')
@@ -21,4 +22,13 @@ gulp.task('minifyJS', () => {
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('default', ['minifyCss', 'minifyJS']);
+gulp.task('minifyImages', () => {
+    return gulp.src('img/*.jpg')
+        .pipe(imagemin({
+            progressive: true,
+            optimizationLevel: 3
+        }))
+        .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task('default', ['minifyCss', 'minifyJS', 'minifyImages']);
