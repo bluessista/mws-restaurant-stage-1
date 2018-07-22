@@ -16,11 +16,13 @@ gulp.task('minifyCss', () => {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('minifyJS', () => {
-    return gulp.src('js/*.js')
-        .pipe(concat('script.min.js'))
-        .pipe(gulp.dest('dist'))
-});
+// gulp.task('minifyJS', () => {
+//     return gulp.src([
+//         'js/main.js',
+//         'js/restaurant_info.js'])
+//         .pipe(concat('script.min.js'))
+//         .pipe(gulp.dest('dist'))
+// });
 
 gulp.task('minifyImages', () => {
     return gulp.src('img/*.jpg')
@@ -31,4 +33,4 @@ gulp.task('minifyImages', () => {
         .pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('default', ['minifyCss', 'minifyJS', 'minifyImages']);
+gulp.task('default', ['minifyCss', 'minifyImages']);
