@@ -245,7 +245,7 @@ select:focus {
   min-width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #ab5a00;
   font-family: Arial, sans-serif;
   font-size: 14pt;
@@ -364,7 +364,7 @@ select:focus {
 
 }
 
-#reviews-container h2 {
+#reviews-container h3 {
   color: #ab5a00;
   font-size: 24pt;
   font-weight: 300;
